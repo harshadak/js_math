@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Math</title>
+</head>
+<body>
+    <script>
+
+        // Math 1
+        function zero_negativity(array) {
+            let result = true;
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] < 0) {
+                    result = false;
+                }
+            }
+            return result;
+        }
+        console.log(zero_negativity([-1, 2, 3]));
+
+        // Math 2
+        function is_even(num) {
+            if (num % 2 == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        console.log(is_even(46));
+
+        // Math 3
+        function how_many_even(array) {
+            let count = 0;
+            for (var i = 0; i < array.length; i++) {
+                if (is_even(array[i])) {
+                    count++;
+                }
+            }
+            return count;
+        }
+        console.log("The total even numbers are: ", how_many_even([1, 2, 5, 78, 4, 6, 8]));
+
+        // Math 4
+        function create_dummy_array(n) {
+            let arr = [];
+            for (var i = 0; i < n; i++) {
+                let rand = Math.floor(Math.random() * 10);
+                arr.push(rand);
+            }
+            return arr;
+        }
+        console.log(create_dummy_array(10));
+
+        // Math 5
+        function random_choice(array) {
+            let rand = Math.floor(Math.random() * array.length);
+            return array[rand];
+        }
+        console.log(random_choice([2, 5, 7, -3, 8, 90, -54]));
+
+    </script>
+</body>
+</html>
